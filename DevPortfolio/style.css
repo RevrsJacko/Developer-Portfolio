@@ -1,0 +1,233 @@
+* {
+  overflow-x:hidden;
+  image-rendering:pixelated;
+}
+.brokentaverntitle {
+  font-family: "Jacquard 12", serif;
+  font-weight: 400;
+  font-size: 64px;
+}
+.bigbrokentaverntitle {
+  font-family: "Jacquard 24", serif;
+  font-weight: 400;
+  font-size: 128px;
+}
+.bigcolorfulcookingtitle {
+  font-family: "Playwrite VN", serif;
+  font-weight: 400;
+  font-size: 64px;
+}
+body {
+  background-color: #ffecd2;
+  transition: .5s;
+  margin: 0;
+}
+p, li, h3, button {
+    color:rgb(170, 111, 66);
+    padding: 0px 40px;
+    font-size: 24px;
+    text-align:center;
+    font-family: "Faculty Glyphic", serif;
+
+}
+p {
+  word-spacing: 5px;
+}
+button {
+  padding: 0px 5px;
+  border-style: double;
+  background-color: transparent;
+  border-color: rgb(109, 59, 13);
+  border-radius: 12px;
+  border-width:6px;
+  transition: .5s
+}
+button:hover {
+  border-style:outset;
+}
+li {
+    font-weight: bold;
+    text-align: none
+}
+h1 {
+    color:rgb(235, 188, 135);
+    padding: 0px 40px;
+    font-size: 48px;
+    text-align: center;
+    font-family: Georgia, serif;
+    text-decoration:underline;
+}
+h2 {
+  color:rgb(235, 188, 135);
+  padding: 0px 40px;
+  font-size: 36px;
+  text-align: center;
+  font-family: Georgia, serif;
+  text-decoration:underline;
+}
+h3 {
+  color:rgb(109, 59, 13);
+  font-family: Georgia, serif;
+
+}
+hr {
+    border-top: 2px dashed rgb(235, 188, 135);
+    width: 100%
+}
+a {
+    cursor:pointer;
+    color:rgb(109, 59, 13);
+    text-decoration-color: rgb(235, 188, 135);
+    transition: .25s;
+    transition-timing-function: ease;
+}
+a:hover {
+    color:rgb(170, 111, 66)
+}
+a:active {
+    color: rgb(235, 188, 135);
+}
+.header {
+    background-color: #ffffff;
+    transition:.5s;
+    padding: 1px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    animation-name: close;
+    animation-duration: .75s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+  }
+  .column {
+    float: left;
+    width: 50%;
+    padding: 0px;
+  }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  img {
+  width: 75%;
+  height: auto;
+  margin:0% 0% 0% 12.5%;
+  transition: .5s;
+  transition-timing-function: ease;
+}
+.scolumn2 {
+  float: left;
+  width: 25%;
+}
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 0px;
+}
+.column3 {
+  img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:40px;
+  }
+  img:hover {
+    cursor:default
+  }
+  float: left;
+  width: 33.33333333333333%;
+}
+.content {
+  padding-top: 140px;
+  z-index: 1;
+}
+i {
+color:rgb(109, 59, 13);
+}
+
+  @media screen and (max-width:1000px) {
+    .header {
+      position:relative;
+    }
+    .content {
+      padding-top:0px;
+    }
+    .column, .column2, .column3 {
+      width: 100%;
+    }
+}
+
+  @media screen and (min-width:1000px) {
+    @keyframes startup {
+      0% {
+        width: 100%;
+        height:1000px;
+        background-color: transparent;
+      }
+      100% {
+        display:none;
+        width: 100%;
+        height:0px;
+      }
+}
+
+.fadein {
+  width:0px;
+  height:0px;
+  position:sticky, fixed;
+  z-index: 4;
+  animation-name: startup;
+  animation-duration:.75s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+}
+::-webkit-scrollbar {
+display:none;
+  z-index:0;
+}
+img {
+  border-style: none;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 12px;
+  border-width:12px;
+}
+@-webkit-keyframes scroll {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes scroll {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+.textanimation {
+  animation-name: gradient;
+  animation-duration:3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes gradient {
+  0% {
+    color: rgb(235, 188, 135);
+  }
+  50% {
+    color: rgb(109, 59, 13);
+  }
+  100% {
+    color: rgb(235, 188, 135);
+  }
+}
